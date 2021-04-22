@@ -1,0 +1,10 @@
+<div>Login</div>
+
+
+<%= form_with url: login_path do |form| %>
+<div class="mb-3">
+  <%= form.label :username, class: 'form-label' %>
+  <%= form.text_field :username, class: 'form-control', placeholder: 'John' %>
+</div>
+<div class="mb-3"> <%= form.submit 'Login!', class: 'btn btn-primary mb-3' %></div>
+<% end %>
