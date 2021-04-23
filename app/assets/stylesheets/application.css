@@ -35,10 +35,11 @@ background-color: #52a5e6;
 
 .main {
   margin-left: 230px;
-  width: 100%
+  width: 100%;
+  background-color: #f5f6f8;
 }
 
 
 .large {
-  height: 92px;
+  height: 88px;
 }
