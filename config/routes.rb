@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'about', to: 'about#index'
 
   get 'register', to: 'registrations#new'
   post 'register', to: 'registrations#create'
