@@ -43,3 +43,8 @@ background-color: #52a5e6;
 .large {
   height: 88px;
 }
+
+.small-avatar {
+  width: 48px;
+  height: 48px;
+}
