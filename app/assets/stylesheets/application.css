@@ -12,39 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ 
  *//*
  dark blue #1c2a3e
 lighter dark blue #213346
 text on dark #6b8196
 light blue 
 bg color #f5f6f8*/
-.bg_blue {
-background-color: #52a5e6;
-}
-.sidenav {
-  height: 100%;
-  width: 230px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  background-color: #213346;
-}
-
-.main {
-  margin-left: 230px;
-  width: 100%;
-  background-color: #f5f6f8;
-}
 
 
-.large {
-  height: 88px;
-}
-
-.small-avatar {
-  width: 48px;
-  height: 48px;
-}

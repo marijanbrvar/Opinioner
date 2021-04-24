@@ -1,7 +1,36 @@
-<div class="profile d-flex mx-4 align-items-center justify-content-between">
-  <div><%= image_tag Current.user.photo, class: 'rounded-3' %></div>
-  <div><span class='text-white fs-6' >  
-  <%= Current.user.full_name.upcase %>
-  </span></div>
+
+  <div class="profile d-flex align-items-center p-3 dark-blue">
+  <div class="me-3">
+    <%= image_tag Current.user.photo, class: 'rounded-3 medium-avatar' %>
+  </div>
+  <div>
+    <span class='profile-text'>  
+      <%= Current.user.full_name.upcase %>
+    </span>
+  </div>
+</div>
+<div class="pt-2 d-flex align-items-center justify-content-center dark-blue">
+  <div class="text-center flex-grow-1">
+    <div class="fs-5 text-white-50 fw-bolder m-0"><%= Current.user.followings.count %></div>
+    <p class="text-muted font-small">Following</p>
+  </div>
+  <div class="text-center flex-grow-1 ">
+    <div class="fs-5 text-white-50 fw-bolder m-0"><%= Current.user.followers.count %></div>
+    <p class="text-muted font-small"><%= 'Follower'.pluralize(Current.user.followers.count) %></p>
+  </div>
 </div>
 
+<div class="left-menu">
+<%= link_to root_path, class: yield(:active_class_home) do %>
+  <i class="bi bi-house-fill"></i>
+  <div class="profile-link">Home</div>
+<% end %>
+<%= link_to discover_path, class: yield(:active_class_home) do %>
+  <i class="bi bi-hash"></i>
+  <div class="profile-link">Discover</div>
+<% end %>
+<%= link_to profile_path, class: yield(:active_class_home) do %>
+  <i class="bi bi-person-fill"></i>
+  <div class="profile-link">Profile</div>
+<% end %>
+</div>
