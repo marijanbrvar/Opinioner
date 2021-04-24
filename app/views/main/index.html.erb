@@ -30,7 +30,7 @@
       <div class="card">
          <div class="card-body">
           <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary">4 New opiniooons</h6>
-          <% @opinions.each do |opinion|%>
+          <% following_opinions.each do |opinion|%>
             <div class=" d-flex">
               <div class="flex-shrink-0">
                 <%= image_tag opinion.user.photo, class: 'rounded-3 small-avatar'  %>
@@ -47,7 +47,7 @@
      
     </div>
     <div class="col-3">
-      <% @users.each do |user| %>
+      <% not_following_users.each do |user| %>
         <div class=" d-flex my-3">
           <div class="flex-shrink-0">
             <%= image_tag user.photo, class: 'rounded-circle small-avatar' %>
@@ -55,6 +55,7 @@
           <div class="flex-grow-1 ms-3">
             <h6 class="fw-bold m-0"><%= user.full_name %></h6>
             <p class="text-black-50"><small>Followed by</small></p>
+             <%= link_to 'Follow', follow_path(user) %>
           </div>
         </div>
       <% end %>

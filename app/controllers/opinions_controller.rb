@@ -12,7 +12,8 @@ class OpinionsController < ApplicationController
     if @opinion.save
       redirect_to root_path, notice: 'Saved'
     else
-      render :new
+      flash[:alert] = 'Not saved!'
+      redirect_to request.referrer
     end
   end
 
