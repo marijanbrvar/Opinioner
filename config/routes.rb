@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   get 'opinion', to: 'opinions#new'
   post 'opinion', to: 'opinions#create'
+  
+  resources :followings, only: %i[destroy]
 
+  get 'follow/:id/follow', to: 'main#follow', as: 'follow'
   root to: 'main#index'
 end
