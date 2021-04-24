@@ -1,3 +1,7 @@
 class MainController < ApplicationController
-  def index; end
+  def index
+    @opinion = Opinion.new
+    @users = User.all
+    @opinions = Current.user.opinions
+  end
 end
