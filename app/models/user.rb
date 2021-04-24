@@ -5,7 +5,7 @@ class User < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.photo ||= Placeholder.image_generator(height: '75', width: '75')
-    self.cover_image ||= Placeholder.image_generator(height: '900', width: '250')
+    self.photo ||= Placeholder.avatar_generator(size: '64', imgno: rand(1..70).to_s)
+    self.cover_image ||= Placeholder.image_generator(height: '450', width: '1200')
   end
 end
