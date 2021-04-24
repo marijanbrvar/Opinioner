@@ -10,4 +10,8 @@ class MainController < ApplicationController
     flash[:alert] = 'Failed!' unless following.save
     redirect_to request.referrer
   end
+
+  def discover; end
+
+  def profile; end
 end
