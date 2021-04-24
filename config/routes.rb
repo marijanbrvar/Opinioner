@@ -9,5 +9,8 @@ Rails.application.routes.draw do
 
   delete 'logout', to: 'sessions#destroy'
 
+  get 'opinion', to: 'opinions#new'
+  post 'opinion', to: 'opinions#create'
+
   root to: 'main#index'
 end
