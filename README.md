@@ -8,19 +8,16 @@
 ![screenshot 2](./app_screenshot_2.png)
 ![screenshot 3](./app_screenshot_3.png)
 
-The project consisted of creating an MVP of the app. With the implementation of the main functionalities.
+Here is a Capstone project built with Ruby on Rails. Project ideas are coming from a redesign suggestion of Twitter. 
 
- - Users log in only with username (proper authentication was not a requirement)
-   - Before a user logs in they can only see the Log in/Sign up page
-   - When they log in they have full access to the app
+ - Users log in only with a username (proper authentication was not a requirement)
+   - Before a user logs in, they can only see the Log in/Sign up page
+   - When they log in, they have full access to the app
  - Users can create opinions/tweets
  - Users can follow other users
- - Users can add a profile photo and a profile cover image
-   - They can upload the images while signing up 
-   - Or, later on through the settings page
- - The discover page shows the most recent opinions/tweets from users that are not followed by the logged in user
+ - The discover page shows the most recent opinions/tweets from users that the logged-in user does not follow
+ - The app is an MVP of the product - with the graphical design, including essential features, with the possibility to extend.
 
- - The app is an MVP of the full product - with the full graphical design, but only basic features that can be extended in the future.
 
 
 ## Built With
