@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   post 'opinion', to: 'opinions#create'
   
   get 'discover', to: 'main#discover'
+
   get 'profile/:id', to: 'main#profile', as: 'profile'
 
   get 'follow/:id', to: 'main#follow', as: 'follow'
+  delete 'follow/:id', to: 'main#destroy'
   root to: 'main#index'
 end
