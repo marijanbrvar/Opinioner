@@ -17,5 +17,6 @@ Rails.application.routes.draw do
 
   get 'follow/:id', to: 'main#follow', as: 'follow'
   delete 'follow/:id', to: 'main#destroy'
-  root to: 'main#index'
+  resources :main, only: %i[index follow destroy]
+  root to: 'sessions#new'
 end

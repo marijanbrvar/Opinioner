@@ -6,7 +6,7 @@
     </div>
     <div class="flex-grow-1 ms-3">
       <h6 class="fw-bold m-0"><%= user.full_name %></h6>
-      <p class="text-black-50 mb-0"><small>Followed by</small></p>
+      <p class="text-black-50 mb-0"><small>@<%= user.username %></small></p>
        <small><%= link_to 'Follow', follow_path(user), class: 'link-primary text-decoration-none'%></small>
     </div>
   </div>

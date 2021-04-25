@@ -6,11 +6,8 @@ class OpinionsController < ApplicationController
 
   def create
     @opinion = Current.user.opinions.new(opinion_params)
-
-    # render plain: @opinion.inspect
-
     if @opinion.save
-      redirect_to root_path, notice: 'Saved'
+      redirect_to main_index_path, notice: 'Saved'
     else
       flash[:alert] = 'Not saved!'
       redirect_to request.referrer

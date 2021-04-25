@@ -7,6 +7,10 @@ module FollowingsHelper
     !Following.where(follower_id: Current.user.id, followed_id: user.id).empty?
   end
 
+  def following(user)
+    User.following(user)
+  end
+
   def followed_by(user)
     User.followers(user)
   end

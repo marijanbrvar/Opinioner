@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if @user.present?
       session[:user_id] = @user.id
-      redirect_to root_path, notice: 'Logged in successfully!'
+      redirect_to main_index_path, notice: 'Logged in successfully!'
     else
       flash[:alert] =
         "User does not exists, create account #{view_context.link_to('Register', register_path)}.".html_safe

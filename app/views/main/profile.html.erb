@@ -85,5 +85,27 @@
           </div>
         <% end %>
     </div>
+    <div class="px-3">
+      <p class="who-to-follow">Following</p>
+        <% following(@user).each do |user| %>
+          <div class=" d-flex my-3">
+            <div class="flex-shrink-0">
+              <%= image_tag user.photo, class: 'rounded-circle medium-avatar' %>
+            </div>
+            <div class="flex-grow-1 ms-3">
+              <h6 class="fw-bold m-0"><%= user.full_name %></h6>
+              <p class="text-black-50 mb-0"><small>Followed by</small></p>
+
+              <% unless Current.user == user %>
+                <% if following?(user) %>
+                 <small> <%= link_to 'Unfollow', follow_path(user.id), method: :delete, class: 'link-primary text-decoration-none'%></small>
+                <% else %>
+                  <small><%= link_to 'Follow', follow_path(user), class: 'link-primary text-decoration-none'%></small>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+    </div>
   </div>
 </div>
