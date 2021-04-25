@@ -29,5 +29,4 @@ class MainController < ApplicationController
     end
     redirect_to request.referrer
   end
-  
 end
