@@ -2,12 +2,12 @@
 <% not_following_users.each do |user| %>
   <div class=" d-flex my-3">
     <div class="flex-shrink-0">
-      <%= image_tag user.photo, class: 'rounded-circle small-avatar' %>
+      <%= image_tag user.photo, class: 'rounded-circle medium-avatar' %>
     </div>
     <div class="flex-grow-1 ms-3">
       <h6 class="fw-bold m-0"><%= user.full_name %></h6>
-      <p class="text-black-50"><small>Followed by</small></p>
-       <%= link_to 'Follow', follow_path(user) %>
+      <p class="text-black-50 mb-0"><small>Followed by</small></p>
+       <small><%= link_to 'Follow', follow_path(user), class: 'link-primary text-decoration-none'%></small>
     </div>
   </div>
 <% end %>

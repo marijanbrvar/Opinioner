@@ -1,17 +1,20 @@
 <div class="card">
-   <div class="card-body">
-    <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary">4 New opiniooons</h6>
+  <div class="card-body">
+    <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary"><%= following_opinions.count %> New opinions</h6>
     <% following_opinions.each do |opinion|%>
       <div class=" d-flex">
         <div class="flex-shrink-0">
           <%= image_tag opinion.user.photo, class: 'rounded-3 small-avatar'  %>
         </div>
         <div class="flex-grow-1 ms-3">
-          <%= opinion.user.full_name %>
-          <%= time_ago_in_words(opinion.created_at) %>
-          <p><%= opinion.text %></p>
+          <div class="d-flex justify-content-between mb-2">
+            <div class="fw-bold"><%= opinion.user.full_name %></div>
+            <div class="text-muted"><small><%= time_ago_in_words(opinion.created_at) %></small></div>
+          </div>
+          <p class="text-muted lh-1"><small><%= opinion.text %></small></p>
+          <hr>
         </div>
       </div>
     <% end %>
-   </div>
+  </div>
 </div>
