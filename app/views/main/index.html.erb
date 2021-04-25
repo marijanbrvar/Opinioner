@@ -6,60 +6,12 @@
         <div class="tweets-text">Tweets</div>
       </div>
       <div class="container">
-        <div class="card mb-4">
-        <div class="card-body">
-          <h6 class="fs-6 mb-2 text-secondary fw-medium text-uppercase">Opinion on something</h6>
-          <%= form_with model: @opinion, url: opinion_path do |form| %>
-            <% if @opinion.errors.any? %>
-              <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <% @opinion.errors.full_messages.each do |message| %>
-                  <strong>Alert! </strong> <%= message %>
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                <% end %>
-              </div>
-            <% end %>
-            <div class="mb-3">
-              <%= form.text_area :text, class: 'form-control', rows: '2', placeholder: 'Compose your opinion' %>
-            </div>
-            <div class="mb-3">
-              <%= form.submit %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <div class="card">
-         <div class="card-body">
-          <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary">4 New opiniooons</h6>
-          <% following_opinions.each do |opinion|%>
-            <div class=" d-flex">
-              <div class="flex-shrink-0">
-                <%= image_tag opinion.user.photo, class: 'rounded-3 small-avatar'  %>
-              </div>
-              <div class="flex-grow-1 ms-3">
-                <%= opinion.user.full_name %>
-                <%= time_ago_in_words(opinion.created_at) %>
-                <p><%= opinion.text %></p>
-              </div>
-            </div>
-          <% end %>
-         </div>
-      </div>
+        <%= render 'opinion' %>
+        <%= render 'opinions_list' %>
       </div>
     </div>
     <div class="col-3 px-3 border-start">
-      <p class="who-to-follow">Who to follow</p>
-      <% not_following_users.each do |user| %>
-        <div class=" d-flex my-3">
-          <div class="flex-shrink-0">
-            <%= image_tag user.photo, class: 'rounded-circle small-avatar' %>
-          </div>
-          <div class="flex-grow-1 ms-3">
-            <h6 class="fw-bold m-0"><%= user.full_name %></h6>
-            <p class="text-black-50"><small>Followed by</small></p>
-             <%= link_to 'Follow', follow_path(user) %>
-          </div>
-        </div>
-      <% end %>
+      <%= render 'to_follow' %>
     </div>
   </div>
 </div>
