@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   post 'opinion', to: 'opinions#create'
   
   get 'discover', to: 'main#discover'
-  get 'profile', to: 'main#profile'
+  get 'profile/:id', to: 'main#profile', as: 'profile'
 
-  get 'follow/:id/follow', to: 'main#follow', as: 'follow'
+  get 'follow/:id', to: 'main#follow', as: 'follow'
   root to: 'main#index'
 end

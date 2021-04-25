@@ -1,1 +1,15 @@
-<h1>discover</h1>
+ <div class="title-section">
+  <div class="tweets-text">Discover</div>
+</div>
+
+<% @not_followed.each do |user| %> 
+  <% user.opinions.each do |opinion| %>
+   <%#= link_to user_path(user.id), class: 'discover-user-link' do %>
+   <%= image_tag user.photo %>
+   <%= user.full_name %> | <%= time_ago_in_words(opinion.created_at) %>
+   <div><%= opinion.text %></div>
+  <% end %>
+<% end %>
+
+
+<%= render 'to_follow' %>

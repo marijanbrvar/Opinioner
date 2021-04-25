@@ -29,7 +29,7 @@
   <i class="bi bi-hash"></i>
   <div class="profile-link">Discover</div>
 <% end %>
-<%= link_to profile_path, class: yield(:active_class_home) do %>
+<%= link_to profile_path(Current.user), class: yield(:active_class_home) do %>
   <i class="bi bi-person-fill"></i>
   <div class="profile-link">Profile</div>
 <% end %>

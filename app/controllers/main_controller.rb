@@ -11,7 +11,12 @@ class MainController < ApplicationController
     redirect_to request.referrer
   end
 
-  def discover; end
+  def discover
+    @not_followed = User.not_following_opinions(Current.user)
+  end
 
-  def profile; end
+  def profile
+    @user = User.find(params[:id])
+    @selected_opinions = @user.opinions.all.order(created_at: :desc)
+  end
 end

@@ -1,1 +1,70 @@
-<h1>Show</h1>
+<div class="row justify-conent-center p-0 m-0 border-bottom ">
+  <div class="col p-0">
+    ​<picture class="cover-image">
+        <%= image_tag @user.cover_image, class:'img-fluid' %>
+    </picture>
+  </div>
+  <div class="col-4 p-0 d-flex flex-column justify-content-between text-center">
+      <div class="flex-grow-1 d-flex justify-content-center align-items-center">
+        <div>
+          <div><%= image_tag @user.photo, class: 'rounded-circle large-avatar' %></div>
+          <h5 class="title mt-3"><%= @user.full_name %></h5>
+          <h6 class="card-subtitle text-muted">@<%= @user.username %></h6>
+        </div>
+      </div>
+      <div class="mt-3">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="text-center flex-grow-1 ">
+            <div class="fs-5 pt-2 fw-bolder m-0"><%= @user.opinions.count %></div>
+            <p class="text-muted font-small"><%= 'Opinion'.pluralize(@user.opinions.count) %></p>
+          </div>
+          <div class="text-center flex-grow-1 border-start border-end ">
+            <div class="fs-5 pt-2 fw-bolder m-0"><%= @user.followings.count %></div>
+            <p class="text-muted font-small">Following</p>
+          </div>
+           <div class="text-center flex-grow-1">
+            <div class="fs-5 pt-2 fw-bolder m-0"><%= @user.followers.count %></div>
+            <p class="text-muted font-small"><%= 'Follower'.pluralize(@user.followers.count) %></p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="row p-0 align-content-center m-0">
+  <div class="col p-0">
+    <div class="title-section">
+      <div class="tweets-text">Tweets</div>
+    </div>
+    <div class="row m-0 p-0">
+      <div class="col p-0">
+        <div class="container px-5">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary"><%= following_opinions.count %> New opinions</h6>
+              <% @selected_opinions.each do |opinion|%>
+                <div class=" d-flex">
+                  <div class="flex-shrink-0">
+                    <%= image_tag opinion.user.photo, class: 'rounded-3 small-avatar'  %>
+                  </div>
+                  <div class="flex-grow-1 ms-3">
+                    <div class="d-flex justify-content-between mb-2">
+                      <div class="fw-bold"><%= opinion.user.full_name %></div>
+                      <div class="text-muted"><small><%= time_ago_in_words(opinion.created_at) %></small></div>
+                    </div>
+                    <p class="text-muted lh-1"><small><%= opinion.text %></small></p>
+                    <hr>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 p-0">
+    <div class="px-3">
+        <%= render 'to_follow' %>
+      </div>
+  </div>
+</div>
