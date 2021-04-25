@@ -33,14 +33,14 @@
 <div class="row p-0 align-content-center m-0">
   <div class="col p-0">
     <div class="title-section">
-      <div class="tweets-text">Tweets</div>
+      <div class="tweets-text">Opinions</div>
     </div>
     <div class="row m-0 p-0">
       <div class="col p-0">
         <div class="container px-5">
           <div class="card">
             <div class="card-body">
-              <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary"><%= following_opinions.count %> New opinions</h6>
+              <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary"><%= @user.opinions.count %> <%= 'New opinion'.pluralize(@user.opinions.count) %> </h6>
               <% @selected_opinions.each do |opinion|%>
                 <div class=" d-flex">
                   <div class="flex-shrink-0">
@@ -64,7 +64,7 @@
   </div>
   <div class="col-4 p-0">
     <div class="px-3">
-        <%= render 'to_follow' %>
-      </div>
+      <%= render 'to_follow' %>
+    </div>
   </div>
 </div>
