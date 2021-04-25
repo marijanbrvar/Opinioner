@@ -1,12 +1,12 @@
-<div class="container mt-5">
+         
+<div>
   <div class="row">
-    <div class="col">Opinions</div>
-    <div class="col-3">Who to follow</div>
-
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="card mb-4">
+    <div class="col p-0">
+      <div class="title-section">
+        <div class="tweets-text">Tweets</div>
+      </div>
+      <div class="container">
+        <div class="card mb-4">
         <div class="card-body">
           <h6 class="fs-6 mb-2 text-secondary fw-medium text-uppercase">Opinion on something</h6>
           <%= form_with model: @opinion, url: opinion_path do |form| %>
@@ -44,9 +44,10 @@
           <% end %>
          </div>
       </div>
-     
+      </div>
     </div>
-    <div class="col-3">
+    <div class="col-3 px-3 border-start">
+      <p class="who-to-follow">Who to follow</p>
       <% not_following_users.each do |user| %>
         <div class=" d-flex my-3">
           <div class="flex-shrink-0">
