@@ -1,18 +1,32 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Opinioner
 
-> One paragraph statement about the project.
+> Capstone Project of the Ruby on Rails Curriculum in Microverse.
 
-![screenshot](./app_screenshot.png)
+![screenshot 1](./app_screenshot_1.png)
+![screenshot 2](./app_screenshot_2.png)
+![screenshot 3](./app_screenshot_3.png)
 
-Additional description about the project and its features.
+The project consisted of creating an MVP of the app. With the implementation of the main functionalities.
+
+ - Users log in only with username (proper authentication was not a requirement)
+   - Before a user logs in they can only see the Log in/Sign up page
+   - When they log in they have full access to the app
+ - Users can create opinions/tweets
+ - Users can follow other users
+ - Users can add a profile photo and a profile cover image
+   - They can upload the images while signing up 
+   - Or, later on through the settings page
+ - The discover page shows the most recent opinions/tweets from users that are not followed by the logged in user
+
+ - The app is an MVP of the full product - with the full graphical design, but only basic features that can be extended in the future.
+
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby (version 2.7.2)
+- Ruby on Rails (version 6.3.1)
 
 ## Live Demo
 
@@ -63,9 +77,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+ Design: [Twitter Redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details), by [Gregoire Vella](https://www.behance.net/gregoirevella)
 
 ## 📝 License
 
