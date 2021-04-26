@@ -8,8 +8,13 @@ Rails.application.routes.draw do
 
   delete 'logout', to: 'sessions#destroy'
 
+  # resources :opinion, only: %i[new create] do
+  #   resources :likes
+  # end
   get 'opinion', to: 'opinions#new'
   post 'opinion', to: 'opinions#create'
+
+  get 'opinion/:id/like', to: 'opinions#like', as: 'like'
   
   get 'discover', to: 'main#discover'
 
