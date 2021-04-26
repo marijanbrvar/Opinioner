@@ -2,7 +2,7 @@ class OpinionsController < ApplicationController
   before_action :require_user_logged_in
 
   include OpinionsHelper
-  
+
   def new
     @opinion = Opinion.new
   end
