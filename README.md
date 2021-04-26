@@ -27,30 +27,44 @@ Here is a Capstone project built with Ruby on Rails. Project ideas are coming fr
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+[Live Demo Link](https://whispering-fjord-40375.herokuapp.com/)
 
 ### Prerequisites
+
+Ruby: 2.7.2
+Rails: 6.1.3
+Postgres: >=13.2
 
 ### Setup
 
 ### Install
-
-### Usage
+To get a local copy up and running, follow these simple example steps.
+1. Position yourself in a working directory, e.g.: `~/work`
+2. Run the following command  `git clone git@github.com:marijanbrvar/Opinioner.git && cd Opinioner`
+3. To install prerequisites, just run `bundle install`
+4. Now, we need to migrate the database. We assume you already install the Postgres server on your local machine
+5. To enable the database for our application, run the following commands:
+```
+   rails db:create
+   rails db:migrate
+```
+6. After all these steps are finished, you can run the application by calling `rails server`
+7. Open the application in your browser at `http://localhost:3000/register` and sign up with a new user.
 
 ### Run tests
 
-### Deployment
+Run following command for unit and integration tests
 
+'rspec'
 
+### Github Actions in case when you Fork repo
+
+To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
+
+1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
+2. Create the `feature/branch` and push.
+3. Start working on your milestone as usual.
+4. Open a PR from the `feature/branch` when your work is done.
 
 ## Authors
 
@@ -66,7 +80,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/marijanbrvar/Opinioner/issues).
 
 ## Show your support
 
@@ -78,5 +92,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-- This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+- This project is [MIT](https://github.com/marijanbrvar/Opinioner/blob/main/LICENSE) licensed.
 - This project is [creativecommons](https://creativecommons.org/licenses/by-nc/4.0/) licensed.
