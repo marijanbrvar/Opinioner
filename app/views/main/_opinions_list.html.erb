@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-body">
-    <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary"><%= following_opinions.count %> New opinions</h6>
-    <% following_opinions.each do |opinion|%>
+    <h6 class="fs-6 mb-2 fw-medium text-uppercase text-primary"><%= value.count %> New opinions</h6>
+    <% value.each do |opinion|%>
       <div class=" d-flex">
         <div class="flex-shrink-0">
           <%= image_tag opinion.user.photo, class: 'rounded-3 small-avatar'  %>
