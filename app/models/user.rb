@@ -20,7 +20,7 @@ class User < ApplicationRecord
                                   .order(created_at: :desc)
                               }
   scope :following, ->(user) { where('id IN (?)', user.followings.map(&:followed_id)) }
-  scope :followers, ->(user) { where('id IN (?)', user.followers.map(&:follower_id)).limit(5) }
+  scope :followers, ->(user) { where('id IN (?)', user.followers.map(&:follower_id)).limit(10) }
 
   after_initialize :set_defaults
 
