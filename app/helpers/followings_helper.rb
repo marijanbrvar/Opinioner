@@ -16,6 +16,10 @@ module FollowingsHelper
   end
 
   def follow_link(user)
-    content_tag(:small, link_to('Follow', follow_path(user), class: 'link-primary text-decoration-none'))
+    if following?(user)
+      content_tag(:small, link_to('Unfollow', follow_path(user.id), method: :delete, class: 'link-primary text-decoration-none'))
+    else
+      content_tag(:small, link_to('Follow', follow_path(user), class: 'link-primary text-decoration-none'))
+    end
   end
 end
