@@ -17,7 +17,7 @@ class MainController < ApplicationController
 
   def profile
     @user = User.find(params[:id])
-    @selected_opinions = @user.opinions.all.order(created_at: :desc)
+    @selected_opinions = @user.opinions.includes(:user).order(created_at: :desc)
   end
 
   def destroy
