@@ -33,7 +33,8 @@
   </div>
   <div class="col-4 p-0 m-0">
     <div class="px-3">
-      <%= render 'to_follow' %>
+      <p class="who-to-follow">Who to follow</p>
+      <%= render 'to_follow', value: not_following_users %>
     </div>
   </div>
 </div>

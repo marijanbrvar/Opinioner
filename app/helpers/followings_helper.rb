@@ -14,4 +14,8 @@ module FollowingsHelper
   def followed_by(user)
     User.followers(user)
   end
+
+  def follow_link(user)
+    content_tag(:small, link_to('Follow', follow_path(user), class: 'link-primary text-decoration-none'))
+  end
 end
