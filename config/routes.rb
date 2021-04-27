@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   post 'opinion', to: 'opinions#create'
 
   get 'opinion/:id/like', to: 'opinions#like', as: 'like'
-  
+  delete 'opinion/:id', to: 'opinions#dislike', as: 'dislike'
+
   get 'discover', to: 'main#discover'
 
   get 'profile/:id', to: 'main#profile', as: 'profile'

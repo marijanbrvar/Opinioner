@@ -12,7 +12,7 @@
             <div class="text-muted"><small><%= time_ago_in_words(opinion.created_at) %></small></div>
           </div>
           <p class="text-muted lh-1"><small><%= opinion.text %></small></p>
-          <%= opinion.likes.count %> <%= link_to 'Like', like_path(opinion.id) unless already_liked?(opinion.id) %>
+          <p class="text-muted fw-bold lh-1"><%= opinion.likes.count %> <%= like_link(opinion.id) %></p>
           <hr>
         </div>
       </div>

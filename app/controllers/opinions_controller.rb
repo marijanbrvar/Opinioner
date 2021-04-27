@@ -19,11 +19,13 @@ class OpinionsController < ApplicationController
 
   def like
     opinion = Opinion.find_by_id(params[:id])
-    if already_liked?(opinion.id)
-      flash[:notice] = "You can't like more than once"
-    else
-      opinion.likes.create(user_id: Current.user.id)
-    end
+    opinion.likes.create(user_id: Current.user.id)
+    redirect_to main_index_path
+  end
+
+  def dislike
+    likes = Current.user.likes.find_by(opinion_id: params[:id])
+    likes.destroy
     redirect_to main_index_path
   end
 
