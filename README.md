@@ -41,15 +41,16 @@ Postgres: >=13.2
 To get a local copy up and running, follow these simple example steps.
 1. Position yourself in a working directory, e.g.: `~/work`
 2. Run the following command  `git clone git@github.com:marijanbrvar/Opinioner.git && cd Opinioner`
-3. To install prerequisites, just run `bundle install`
-4. Now, we need to migrate the database. We assume you already install the Postgres server on your local machine
-5. To enable the database for our application, run the following commands:
+3. To install prerequisites, just run `bundle install`,
+4. sometime is necessary to run `yarn install` as well
+5. Now, we need to migrate the database. We assume you already install the Postgres server on your local machine
+6. To enable the database for our application, run the following commands:
 ```
    rails db:create
    rails db:migrate
 ```
-6. After all these steps are finished, you can run the application by calling `rails server`
-7. Open the application in your browser at `http://localhost:3000/register` and sign up with a new user.
+7. After all these steps are finished, you can run the application by calling `rails server`
+8. Open the application in your browser at `http://localhost:3000/register` and sign up with a new user.
 
 ### Run tests
 
