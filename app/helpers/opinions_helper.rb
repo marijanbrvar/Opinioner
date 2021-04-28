@@ -9,9 +9,10 @@ module OpinionsHelper
 
   def like_link(opinion_id)
     if already_liked?(opinion_id)
-      link_to(raw('<i class="bi bi-hand-thumbs-up-fill"></i>'), dislike_path(opinion_id), method: :delete)
+      link_to(raw('<i class="bi bi-hand-thumbs-up-fill"></i>'), dislike_path(opinion_id), method: :delete,
+                                                                                          class: 'like')
     else
-      link_to(raw('<i class="bi bi-hand-thumbs-up"></i>'), like_path(opinion_id))
+      link_to(raw('<i class="bi bi-hand-thumbs-up"></i>'), like_path(opinion_id), class: 'unlike')
     end
   end
 end

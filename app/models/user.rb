@@ -10,8 +10,8 @@ class User < ApplicationRecord
   validates :full_name, presence: true, length: { minimum: 5, maximum: 20 }
 
   scope :not_following_opinions, lambda { |user|
-                                   includes(:opinions).where('id NOT IN (?)',
-                                                             (user.followings.map(&:followed_id) << user.id))
+                                   where('id NOT IN (?)',
+                                         (user.followings.map(&:followed_id) << user.id))
                                      .limit(10).order(created_at: :desc)
                                  }
   scope :not_following_users, lambda { |user|
@@ -19,6 +19,7 @@ class User < ApplicationRecord
                                       (user.followings.map(&:followed_id) << user.id)).limit(10)
                                   .order(created_at: :desc)
                               }
+
   scope :following, ->(user) { where('id IN (?)', user.followings.map(&:followed_id)) }
   scope :followers, ->(user) { where('id IN (?)', user.followers.map(&:follower_id)).limit(10) }
 
