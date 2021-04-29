@@ -4,10 +4,6 @@
 
 > Capstone Project of the Ruby on Rails Curriculum in Microverse.
 
-![screenshot 1](./app_screenshot_1.png)
-![screenshot 2](./app_screenshot_2.png)
-![screenshot 3](./app_screenshot_3.png)
-
 Here is a Capstone project built with Ruby on Rails. Project ideas are coming from a redesign suggestion of Twitter. 
 
  - Users log in only with a username (proper authentication was not a requirement)
@@ -18,7 +14,9 @@ Here is a Capstone project built with Ruby on Rails. Project ideas are coming fr
  - The discover page shows the most recent opinions/tweets from users that the logged-in user does not follow
  - The app is an MVP of the product - with the graphical design, including essential features, with the possibility to extend.
 
-
+![screenshot 1](./app_screenshot_1.png)
+![screenshot 2](./app_screenshot_2.png)
+![screenshot 3](./app_screenshot_3.png)
 
 ## Built With
 
