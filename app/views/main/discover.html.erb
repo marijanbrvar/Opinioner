@@ -1,0 +1,40 @@
+<div class="row ps-0 pe-0 pt-0 pb-5">
+  <div class="col p-0 m-0">
+    <div class="title-section">
+      <div class="tweets-text">Discover</div>
+    </div>
+    <div class="container m-3">
+      <div class="card">
+        <div class="card-body">
+         <% @not_followed.each do |user| %> 
+            <h6 class="fs-6 mb-2 fw-medium text-uppercase text-muted">
+              <%= user.opinions.count %> 
+              <%= 'New opinion'.pluralize(user.opinions.count) %>
+            </h6>
+          <% user.opinions.each do |opinion|%>
+            <div class=" d-flex">
+              <div class="flex-shrink-0">
+                <%= image_tag opinion.user.photo, class: 'rounded-3 small-avatar'  %>
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <div class="fw-bold"><%= link_to opinion.user.full_name, profile_path(user), class: 'text-decoration-none' %></div>
+                  <div class="text-muted"><small><%= time_ago_in_words(opinion.created_at) %></small></div>
+                </div>
+                <p class="text-muted lh-1"><small><%= opinion.text %></small></p>
+              </div>
+            </div>
+          <% end %>
+            <hr>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 p-0 m-0">
+    <div class="px-3">
+      <p class="who-to-follow">Who to follow</p>
+      <%= render 'to_follow', value: not_following_users %>
+    </div>
+  </div>
+</div>

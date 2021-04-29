@@ -1,0 +1,29 @@
+.bg_blue {
+  background-color: #52a5e6;
+}
+
+.sidenav {
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: #213346;
+}
+
+html {
+  background-color: #f5f6f8;
+}
+
+.main {
+  margin-left: 230px;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f5f6f8;
+}
+
+.large {
+  height: 88px;
+}

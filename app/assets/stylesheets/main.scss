@@ -1,0 +1,132 @@
+.small-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.medium-avatar {
+  width: 48px;
+  height: 48px;
+}
+
+.large-avatar {
+  width: 104px;
+  height: 104px;
+}
+
+.profile-text {
+  font-size: 0.9rem;
+  color: #ffffff9a;
+  font-weight: 500;
+}
+
+.profile {
+  height: 88px;
+  border-bottom: 1px solid #ffffff40;
+}
+
+.font-small {
+  font-size: 0.8rem;
+}
+
+.dark-blue {
+  background-color: #1c2a3e;
+}
+
+.cover-image {
+  height: 100%;
+  max-height: 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.left-menu {
+  width: 240px;
+  color: white;
+
+  a {
+    text-decoration: none;
+    padding: 10px 35px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+
+    i {
+      font-size: 22px;
+      color: rgb(143, 143, 143);
+      margin-right: 10px;
+    }
+
+    .profile-link {
+      display: inline-block;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgb(143, 143, 143);
+    }
+  }
+
+  a.left-menu-active {
+    text-decoration: none;
+    padding: 10px 35px;
+    display: block;
+    background-color: rgb(29, 161, 242);
+
+    i {
+      font-size: 22px;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .profile-link {
+      display: inline-block;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  a:hover {
+    background-color: rgb(29, 161, 242);
+
+    i,
+    .profile-link {
+      color: white;
+    }
+  }
+}
+
+.title-section {
+  height: 74px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  div {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(143, 143, 143);
+    padding: 24px 20px;
+    height: 100%;
+  }
+
+  .tweets-text {
+    border-bottom: 4px solid rgb(29, 161, 242);
+    color: rgb(98, 98, 98);
+  }
+}
+
+.who-to-follow {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 25px 20px 26px;
+  margin: 0;
+  color: rgb(143, 143, 143);
+  border-bottom: 1px solid rgb(216, 216, 216);
+}

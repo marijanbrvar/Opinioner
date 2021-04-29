@@ -1,0 +1,10 @@
+<h1>Opinions</h1>
+
+ <%= form_with model: @opinion, url: opinion_path do |form| %>
+    <div class="mb-3">
+      <%= form.text_area :text %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit %>
+    </div>
+  <% end %>

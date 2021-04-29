@@ -1,0 +1,16 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="">
+      <h6 class="fs-6 mb-2 text-secondary fw-medium text-uppercase">Opinion on something</h6>
+    </div>
+    <%= form_with model: @opinion, url: opinion_path do |form| %>
+    <%= render 'shared/forms_alert', value: @opinion %>
+      <div class="mb-3">
+        <%= form.text_area :text, class: 'form-control', rows: '2', placeholder: 'Compose your opinion' %>
+      </div>
+      <div class="mb-3 float-end">
+        <%= form.submit 'Save', class: 'btn btn-primary px-4 btn-sm' %>
+      </div>
+    <% end %>
+  </div>
+</div>

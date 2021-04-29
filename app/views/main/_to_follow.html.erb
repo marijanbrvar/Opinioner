@@ -1,0 +1,12 @@
+<% value.each do |user| %>
+  <div class=" d-flex my-3">
+    <div class="flex-shrink-0">
+      <%= image_tag user.photo, class: 'rounded-circle medium-avatar' %>
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h6 class="fw-bold m-0"><%= link_to user.full_name, profile_path(user), class: 'text-dark text-decoration-none'  %></h6>
+      <p class="text-black-50 mb-0"><small>@<%= user.username %></small></p>
+       <%= follow_link(user) %>
+    </div>
+  </div>
+<% end %>
