@@ -4,14 +4,7 @@
       <h6 class="fs-6 mb-2 text-secondary fw-medium text-uppercase">Opinion on something</h6>
     </div>
     <%= form_with model: @opinion, url: opinion_path do |form| %>
-      <% if @opinion.errors.any? %>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <% @opinion.errors.full_messages.each do |message| %>
-            <strong>Alert! </strong> <%= message %>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          <% end %>
-        </div>
-      <% end %>
+    <%= render 'shared/forms_alert', value: @opinion %>
       <div class="mb-3">
         <%= form.text_area :text, class: 'form-control', rows: '2', placeholder: 'Compose your opinion' %>
       </div>
