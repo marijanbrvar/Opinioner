@@ -6,7 +6,7 @@
 <p>for your new account.</p>
 
 <%= form_with model: @user, url: register_path do |form| %>
-  <%= render 'shared/forms_alert', value: @user %>
+  <%= form_messages(@user) %>
 <div class="mb-3">
   <%= form.label 'User Name:', class: 'form-label' %>
   <%= form.text_field :username, class: 'form-control', placeholder: 'e.g.,John' %>
